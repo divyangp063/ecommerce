@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 const Confirmation = () => {
   const { state: order } = useLocation();
   
-  // Hardcoded confirmation number
+  // hardcoded confirmation number
   const confirmationNumber = "ABC123456789"; 
 
   return (
