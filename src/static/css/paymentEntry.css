@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.form{
+    font-family: "Inter";
+    font-weight: bold;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}
