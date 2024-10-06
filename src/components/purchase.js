@@ -4,7 +4,7 @@ import {useNavigate} from "react-router-dom"
 import '../static/css/paymentEntry.css'
 
 const Purchase = () => {
-  const [order, setOrder] = useState({
+  const [order] = useState({
     buyQuantity: [0,0,0,0,0], credit_card_number: '', expiry_date: '', cvvCode: '',
     card_holder_name: '', address_1: '', address_2: '', city: '', state: '', zip: '',
   });
@@ -31,6 +31,27 @@ const Purchase = () => {
           type="number"
           required
           onChange={(e) => {order.buyQuantity[1] = e.target.value;}}
+        />
+        <br/>
+        <label>Product 3</label>
+        <input 
+          type="number"
+          required
+          onChange={(e) => {order.buyQuantity[2] = e.target.value;}}
+        />
+        <br/>
+        <label>Product 4</label>
+        <input 
+          type="number"
+          required
+          onChange={(e) => {order.buyQuantity[3] = e.target.value;}}
+        />
+        <br/>
+        <label>Product 5</label>
+        <input 
+          type="number"
+          required
+          onChange={(e) => {order.buyQuantity[4] = e.target.value;}}
         />
         <br/>
         <button className='button'>Pay</button>
