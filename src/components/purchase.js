@@ -1,18 +1,20 @@
 import React from "react"
 import {useState} from "react"
 import {useNavigate} from "react-router-dom"
+import '../static/css/paymentEntry.css'
 
 const Purchase = () => {
   const [order, setOrder] = useState({
-    buyQuantity: [0,0,0,0,0], credit_card_number: '', expir_date: '', cvvCode: '',
+    buyQuantity: [0,0,0,0,0], credit_card_number: '', expiry_date: '', cvvCode: '',
     card_holder_name: '', address_1: '', address_2: '', city: '', state: '', zip: '',
   });
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    navigate('/purchase/paymentEntry', {order: order, setOrder: setOrder});}
+    //console.log(order);
+    navigate('/purchase/paymentEntry', {state:order});
+  }
 
-  console.log('order: ', order);
 
   return (
     <div>

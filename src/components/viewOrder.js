@@ -1,15 +1,21 @@
 import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import {useState} from 'react'
 
-const viewOrder = () => {
+const ViewOrder = () => {
+
+  const {state} = useLocation()
+
+
   let title = "order page";
 
   return (
     <div>
       <h1>
-        {title}
+        View Order
         </h1>
     </div>
   );
 };
 
-export default viewOrder;
+export default ViewOrder;
