@@ -19,42 +19,48 @@ const Purchase = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label>Product 1</label>
+        <label>Product 1: </label>
         <input 
           type="number"
           required
+          min="0"
+          style={{marginTop: '50px'}} // shifting the top text down
           onChange={(e) => {order.buyQuantity[0] = e.target.value;}}
         />
         <br/>
-        <label>Product 2</label>
+        <label>Product 2: </label>
         <input 
           type="number"
           required
+          min="0"
           onChange={(e) => {order.buyQuantity[1] = e.target.value;}}
         />
         <br/>
-        <label>Product 3</label>
+        <label>Product 3: </label>
         <input 
           type="number"
           required
+          min="0"
           onChange={(e) => {order.buyQuantity[2] = e.target.value;}}
         />
         <br/>
-        <label>Product 4</label>
+        <label>Product 4: </label>
         <input 
           type="number"
           required
+          min="0"
           onChange={(e) => {order.buyQuantity[3] = e.target.value;}}
         />
         <br/>
-        <label>Product 5</label>
+        <label>Product 5: </label>
         <input 
           type="number"
           required
+          min="0"
           onChange={(e) => {order.buyQuantity[4] = e.target.value;}}
         />
         <br/>
-        <button className='button'>Pay</button>
+        <button style={{marginTop: '20px'}} className='button'>Pay</button>
       </form>
     </div>
   );
